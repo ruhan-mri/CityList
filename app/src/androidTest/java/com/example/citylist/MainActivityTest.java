@@ -83,6 +83,7 @@ public class MainActivityTest {
         onView(withId(R.id.editText_name)).perform(ViewActions.typeText("Edmonton")); //Type a city name
         onView(withId(R.id.button_confirm)).perform(click()); //Confirm the city name and add to the list
 
+        //Espresso.pressBack();
         onData(anything()).inAdapterView(withId(R.id.city_list)).atPosition(0).perform(click());
 
         onView(withId(R.id.second)).check(matches(isDisplayed()));
